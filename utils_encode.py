@@ -28,7 +28,8 @@ class UtilsEncode_functions:
                 wvls = [s.get_array_of_samples() for s in wvls]
                 wv = np.array(wvls).T.astype(np.float32)
                 wv /= np.iinfo(wvls[0].typecode).max
-                yield np.squeeze(wv), bname
+                #yield np.squeeze(wv), bname
+                yield wv, bname
             except Exception as e:
                 #print(e)
                 #print("Exception ignored! Continuing...")
