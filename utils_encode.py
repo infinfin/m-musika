@@ -55,7 +55,7 @@ class UtilsEncode_functions:
         pbar = tqdm(self.audio_generator(), position=0, leave=True, total=len(self.paths))
 
         for (wv,bname) in pbar:
-            print('..', wv.shape, self.args.hop * self.args.shape * 2 + 3 * self.args.hop)
+            #print('..', wv.shape, self.args.hop * self.args.shape * 2 + 3 * self.args.hop)
 
             try:
 
