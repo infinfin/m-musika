@@ -30,9 +30,10 @@ class UtilsEncode_functions:
                 wv /= np.iinfo(wvls[0].typecode).max
                 yield np.squeeze(wv), bname
             except Exception as e:
-                print(e)
-                print("Exception ignored! Continuing...")
-                pass
+                #print(e)
+                #print("Exception ignored! Continuing...")
+                #pass
+                raise
 
     # def create_dataset(self):
     #     self.ds = (
