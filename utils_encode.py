@@ -20,7 +20,6 @@ class UtilsEncode_functions:
     def audio_generator(self):
         for p in self.paths:
             try:
-                print('..', p)
                 tp, ext = os.path.splitext(p)
                 bname = os.path.basename(tp)
                 wvo = AudioSegment.from_file(p, format=ext[1:])
@@ -54,6 +53,7 @@ class UtilsEncode_functions:
         pbar = tqdm(self.audio_generator(), position=0, leave=True, total=len(self.paths))
 
         for (wv,bname) in pbar:
+            print('..', wv.shape, self.args.hop * self.args.shape * 2 + 3 * self.args.hop)
 
             try:
 
