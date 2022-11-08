@@ -139,9 +139,10 @@ class UtilsEncode_functions:
                             del latc
 
             except Exception as e:
-                print(e)
-                print("Exception ignored! Continuing...")
-                pass
+                #print(e)
+                #print("Exception ignored! Continuing...")
+                #pass
+                raise
 
 
     def compress_whole_files(self, models_ls=None):
