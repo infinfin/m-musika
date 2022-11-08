@@ -15,10 +15,12 @@ class UtilsEncode_functions:
         self.args = args
         self.U = Utils_functions(args)
         self.paths = sorted(glob(self.args.files_path + "/*"))
+        print('files:', len(self.paths))
 
     def audio_generator(self):
         for p in self.paths:
             try:
+                print('..', p)
                 tp, ext = os.path.splitext(p)
                 bname = os.path.basename(tp)
                 wvo = AudioSegment.from_file(p, format=ext[1:])
